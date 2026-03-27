@@ -158,5 +158,225 @@ print(a * b)
 
 ---
 
+🔹 2. ARRAY CREATION
+
+🧠 What is Array Creation?
+
+👉 Converting data (lists, numbers) into NumPy arrays
+
+
+---
+
+🔥 1. np.array() (MOST IMPORTANT)
+
+np.array(data)
+
+👉 Converts Python list → NumPy array
+
+
+---
+
+✅ 1D Array
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr)
+
+👉 Output:
+
+[1 2 3 4]
+
+👉 This is a 1D array (vector)
+
+
+---
+
+🔥 2. 2D Array (Matrix)
+
+arr2 = np.array([
+    [1,2,3],
+    [4,5,6]
+])
+print(arr2)
+
+👉 Output:
+
+[[1 2 3]
+ [4 5 6]]
+
+👉 This is a 2D array (rows + columns)
+
+
+---
+
+🧠 IMPORTANT RULE (you already learned this!)
+
+❌ Wrong:
+
+np.array([1,2,3], [4,5,6])
+
+✅ Correct:
+
+np.array([[1,2,3], [4,5,6]])
+
+👉 Must use list of lists
+
+
+---
+
+🔥 3. Nested Lists → Arrays
+
+nested = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+arr = np.array(nested)
+print(arr)
+
+👉 Automatically becomes 2D array
+
+
+---
+
+🧠 Concept Clarity
+
+Structure	Meaning
+
+[1,2,3]	1D array
+[[1,2,3],[4,5,6]]	2D array
+deeper nesting	higher dimensions
+
+
+
+---
+
+
+🧠 One-line Summary
+
+👉 Array = structured data (1D, 2D, or more)
+
+
+---
+
+🔹 3. ARRAY PROPERTIES (VERY IMPORTANT)
+
+These tell you everything about an array 🧠
+
+
+---
+
+🧠 Why this matters?
+
+When working with data:
+
+You must know shape
+
+Type of data
+
+Size
+
+
+👉 Otherwise → bugs + confusion ❌
+
+
+---
+
+🔥 1. shape
+
+👉 Tells rows × columns
+
+arr.shape
+
+Example:
+
+import numpy as np
+
+arr = np.array([[1,2,3],
+                [4,5,6]])
+
+print(arr.shape)
+
+👉 Output:
+
+(2, 3)
+
+👉 Meaning:
+
+2 rows
+
+3 columns
+
+
+
+---
+
+🔥 2. ndim (number of dimensions)
+
+arr.ndim
+
+Example:
+
+print(arr.ndim)
+
+👉 Output:
+
+2
+
+👉 Meaning:
+
+2D array
+
+
+
+---
+
+🔥 3. size
+
+👉 Total number of elements
+
+arr.size
+
+Example:
+
+print(arr.size)
+
+👉 Output:
+
+6
+
+👉 (2 × 3 = 6 elements)
+
+
+---
+
+🔥 4. dtype
+
+👉 Data type of elements
+
+arr.dtype
+
+Example:
+
+print(arr.dtype)
+
+👉 Output:
+
+int64
+
+
+---
+
+🧠 Quick Table (REVISION)
+
+Property	Meaning
+
+shape	rows × columns
+ndim	number of dimensions
+size	total elements
+dtype	data type
+
 
 
